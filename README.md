@@ -2,7 +2,7 @@
 
 Статический магазин бесплатных программ. Фронтенд находится в корне репозитория; сборка не нужна. Для Netlify выберите корневую папку сайта и оставьте команду сборки пустой.
 
-Настройка гостевой публикации и Cloudflare Turnstile описана в [README-NETLIFY.md](README-NETLIFY.md).
+Настройка входа через Google и публикации описана в [README-NETLIFY.md](README-NETLIFY.md).
 
 ## Supabase
 
@@ -17,5 +17,4 @@
 
 Для ручной синхронизации через Supabase CLI установите CLI, выполните `supabase link --project-ref oazgnuzihekwafffuwjb`, затем `supabase db push` только после проверки предлагаемых миграций.
 
-Фронтенд-конфигурация не содержит секретного ключа Supabase или Turnstile.
-
+Фронтенд-конфигурация не содержит Google Client Secret или секретного ключа Supabase.
