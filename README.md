@@ -8,7 +8,14 @@
 
 Каталог использует Supabase project `oazgnuzihekwafffuwjb`. Настройки CLI и миграции находятся в `supabase/`. Миграции отражают уже применённую историю проекта и служат источником схемы для последующих изменений. Не запускайте начальные миграции повторно на уже настроенной базе.
 
-Для подключения этого репозитория в панели Supabase откройте **Integrations → GitHub** и выберите репозиторий. Для синхронизации миграций через Supabase CLI установите CLI, выполните `supabase link --project-ref oazgnuzihekwafffuwjb`, затем используйте `supabase db push` только после проверки предложенных миграций.
+Чтобы подключить репозиторий к существующему проекту:
+
+1. Откройте [настройки интеграций проекта Bashid Store](https://supabase.com/dashboard/project/oazgnuzihekwafffuwjb/settings/integrations).
+2. В секции **GitHub Integration** нажмите **Authorize GitHub** и подтвердите доступ Supabase к репозиторию `plototon01/Bashid-store`.
+3. Выберите репозиторий, укажите рабочую папку `.` и включите **Deploy to production** для применения новых миграций из `main`.
+4. Сохраните интеграцию. Текущая история миграций уже отражена в базе; новые файлы миграций будут применяться при последующих push в `main`.
+
+Для ручной синхронизации через Supabase CLI установите CLI, выполните `supabase link --project-ref oazgnuzihekwafffuwjb`, затем `supabase db push` только после проверки предлагаемых миграций.
 
 Фронтенд-конфигурация не содержит секретного ключа Supabase или Turnstile.
 
